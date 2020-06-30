@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>ItemExporters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Name</th>
+      <th>Payload</th>
+      <th>State</th>
+      <th>Content</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @actions.each do |action| %>
+      <tr>
+        <td><%= action.status %></td>
+        <td><%= action.name %></td>
+        <td><%= action.payload %></td>
+        <td><%= action.state %></td>
+        <td>
+          <% action.storages.each do |storage| %>
+            <%= link_to storage.content.filename, rails_blob_path(storage.content, disposition: 'attachment') %>
+          <% end %>
+        </td>
+        <td><%= action.created_at %></td>
+        <td><%= action.updated_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= form_tag item_exporters_path, multipart: true do %>
+  <div class="actions">
+    <%= submit_tag :Submit %>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to 'Back', items_path %>
