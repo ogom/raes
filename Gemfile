@@ -13,5 +13,7 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+gem 'bullet', group: :development
 gem 'pry-rails', group: :development
 gem 'rspec_junit_formatter', group: :test
+gem 'shoulda-matchers', group: :test

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    raes (0.1.0)
+    raes (0.1.1)
       rails (~> 6.0.3, >= 6.0.3.2)
 
 GEM
@@ -63,6 +63,9 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
     builder (3.2.4)
+    bullet (6.1.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     coderay (1.1.3)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
@@ -146,6 +149,8 @@ GEM
     rspec-support (3.9.3)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
+    shoulda-matchers (4.3.0)
+      activesupport (>= 4.2.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -158,6 +163,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    uniform_notifier (1.13.0)
     websocket-driver (0.7.2)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -167,11 +173,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bullet
   factory_bot_rails
   pry-rails
   raes!
   rspec-rails
   rspec_junit_formatter
+  shoulda-matchers
   sqlite3
 
 BUNDLED WITH

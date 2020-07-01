@@ -4,6 +4,8 @@ require 'rails_helper'
 
 module Raes
   RSpec.describe Action, type: :model do
-    pending "add some examples to (or delete) #{__FILE__}"
+    describe 'associations' do
+      it { is_expected.to have_many(:storages) }
+    end
   end
 end
