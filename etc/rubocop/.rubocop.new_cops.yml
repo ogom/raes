@@ -1,0 +1,7 @@
+# For more information: https://docs.rubocop.org/rubocop/versioning.html
+
+AllCops:
+  NewCops: enable
+
+Lint/MissingSuper:
+  Enabled: false

@@ -12,6 +12,6 @@ module Raes
   end
 
   def self.search(name)
-    Action.search(name).includes(:storages)
+    Action.search(name)
   end
 end
