@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    raes (0.1.1)
+    raes (0.1.2)
       rails (~> 6.0.3, >= 6.0.3.2)
 
 GEM
@@ -164,7 +164,7 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uniform_notifier (1.13.0)
-    websocket-driver (0.7.2)
+    websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.3.1)

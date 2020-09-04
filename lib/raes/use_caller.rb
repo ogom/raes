@@ -16,12 +16,6 @@ module Raes
 
     private
 
-    def initialize(*params)
-      return if params.empty?
-
-      raise NotImplementedError, "You must implement #{self.class}##{__method__}"
-    end
-
     def call
       raise NotImplementedError, "You must implement #{self.class}##{__method__}"
     end
