@@ -2,5 +2,6 @@
 
 class ApplicationInteractor
   include Raes::UseCaller
+  include Raes::UseContextLogger
   include Raes::UseStorage
 end

@@ -86,6 +86,25 @@ If use storage, then execute:
 $ rails active_storage:install
 ```
 
+## Configuration
+
+Add the following to your config/raes.yml:
+
+```yaml
+default: &default
+  concern:
+    context_logger: Rails
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+```
+
 ## Test
 
 ```bash

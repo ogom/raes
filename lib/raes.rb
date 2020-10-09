@@ -2,11 +2,18 @@
 
 require 'raes/engine'
 require 'raes/use_caller'
+require 'raes/use_context_logger'
 require 'raes/use_storage'
 require 'raes/dispatch'
 require 'raes/reducer'
 
 module Raes
+  def self.config
+    @config ||= Rails.application.config_for(:raes)
+  rescue StandardError => e
+    @config = {}
+  end
+
   def self.dispatch(name, payload = {})
     Dispatch.call(name, payload)
   end

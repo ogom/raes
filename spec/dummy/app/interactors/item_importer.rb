@@ -10,7 +10,8 @@ class ItemImporter < ApplicationInteractor
 
   def call
     records = CSV.parse(raes_storage_content, headers: true)
-    records.each do |record|
+    records.each.with_index(1) do |record, index|
+      logger.info("index: #{index}") if index.modulo(3).zero?
       item = Item.find_or_initialize_by(code: record['code'])
       item.update(record.to_hash.slice(*@attributes))
     end
