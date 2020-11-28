@@ -10,7 +10,7 @@ require 'raes/reducer'
 module Raes
   def self.config
     @config ||= Rails.application.config_for(:raes)
-  rescue StandardError => e
+  rescue StandardError
     @config = {}
   end
 
@@ -20,5 +20,9 @@ module Raes
 
   def self.search(name)
     Action.search(name)
+  end
+
+  def self.stateless(name, payload = {})
+    StatelessJob.perform_later(name.to_s, payload)
   end
 end

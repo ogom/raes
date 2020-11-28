@@ -3,7 +3,10 @@
 module Raes
   class SubscribeJob < ApplicationJob
     def perform(action)
-      Reducer.call(action)
+      ActiveRecord::Base.uncached do
+        Reducer.call(action)
+      end
+      GC.start
     end
   end
 end

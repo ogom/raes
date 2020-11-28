@@ -23,10 +23,11 @@ module Raes
     end
 
     def create_state
-      if @action.name.constantize.instance_method(:initialize).arity.zero?
-        @action.name.constantize.call
+      klass = @action.name.constantize
+      if klass.instance_method(:initialize).arity.zero?
+        klass.call
       else
-        @action.name.constantize.call(JSON.parse(@action.payload).symbolize_keys)
+        klass.call(JSON.parse(@action.payload).symbolize_keys)
       end
     end
   end
