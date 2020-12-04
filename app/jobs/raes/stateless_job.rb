@@ -9,8 +9,6 @@ module Raes
       else
         klass.call(payload.symbolize_keys)
       end
-
-      GC.start
     end
   end
 end
