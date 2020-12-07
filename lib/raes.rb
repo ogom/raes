@@ -3,6 +3,7 @@
 require 'raes/engine'
 require 'raes/use_caller'
 require 'raes/use_context_logger'
+require 'raes/use_memory_limit'
 require 'raes/use_storage'
 require 'raes/dispatch'
 require 'raes/reducer'
