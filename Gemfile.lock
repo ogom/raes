@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    raes (0.2.2)
+    raes (0.2.3)
+      get_process_mem
       rails (~> 6.0.3, >= 6.0.3.2)
 
 GEM
@@ -76,6 +77,9 @@ GEM
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
+    ffi (1.13.1)
+    get_process_mem (0.2.7)
+      ffi (~> 1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.5)
